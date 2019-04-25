@@ -15,5 +15,46 @@
 
     <h1>Another Programming Notes</h1>
 
+    <h2>Package</h2>
+    <p>
+      A package, like a library, is a collection of classes, and other related entities such as interfaces, errors, exceptions, and enums.
+      <br>
+      Package name (e.g., java.util) and classname (e.g., Scanner) together form the so-called fully-qualified name in the form of packagename.classname (e.g., java.util.Scanner), which unambiguously identifies a class.
+    </p>
+    Packages are used for:
+    <ol>
+      <li>Organizing</li>
+      <li>Managing namespaces</li>
+      <li>Resolving naming conflicts</li>
+      <li>Access control</li>
+      <li>Distributing Java classes: All entities in a package can be combined and compressed into a single file, known as JAR (Java Archive) file, for distribution.</li>
+    </ol>
+
+    <p>The prefix "java" and "javax" are reserved for the core Java packages and Java extensions, e.g., java.lang, java.util, and java.net, javax.net.</p>
+
+    <p>The "dots" in a package name correspond to the directory structure for storing the class files. For example, the com.zzz.Cat is stored in directory "...\com\zzz\Cat.class" and com.yyy.project1.subproject2.Orange is stored in directory "...\com\yyy\project1\subproject2\Orange.class", where "..." denotes the base directory of the package.</p>
+  
+    <p>JVM can locate your class files only if the package base directory and the fully-qualified name are given. The package base directory is provided in the so-called classpath.</p>
+
+    <p>The <b>package</b> keyword is used to create a package in java.</p>
+
+    <h3>How to Reference a Class?</h3>
+    <ol>
+      <li>import package.*;</li>
+      <li>import package.classname;</li>
+      <li>fully qualified name.</li>
+    </ol>
+
+    <p>The <b>import</b> statement(s) must be placed after the package statement but before the class declaration.</p>
+
+    <p>The Java core language package java.lang is implicitly imported to every Java program. Hence no explicit import statements are needed for classes inside the java.lang package, such as System, String, Math, Integer and Object.</p>
+    
+    <p>There is also no need for import statements for classes within the same package.</p>
+
+    <p>Note: Sequence of the program must be package then import then class.</p>
+    <div style="text-align: center;">
+      <img src="sequenceofpackage.jpeg" alt="sequence of package">
+    </div>
+  
   </body>
 </html>
