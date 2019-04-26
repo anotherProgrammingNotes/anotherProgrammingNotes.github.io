@@ -4,14 +4,14 @@
     <title>Another Programming Notes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        background-color: black;
-        color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="toggleSwitch.css">
   </head>
   <body>
+    
+    <label class="switch">
+      <input type="checkbox" id="night" onchange="dayNight();">
+      <span class="slider round"></span>
+    </label>
 
     <h1>Another Programming Notes</h1>
 
@@ -29,6 +29,8 @@
       <li>Access control</li>
       <li>Distributing Java classes: All entities in a package can be combined and compressed into a single file, known as JAR (Java Archive) file, for distribution.</li>
     </ol>
+
+    <p>For production, you should place your classes in proper packages.</p>
 
     <p>The prefix "java" and "javax" are reserved for the core Java packages and Java extensions, e.g., java.lang, java.util, and java.net, javax.net.</p>
 
@@ -55,6 +57,18 @@
     <div style="text-align: center;">
       <img src="sequenceofpackage.jpeg" alt="sequence of package">
     </div>
-  
+    
+
+    <script>
+      function dayNight() {
+        if (document.getElementById("night").checked) {
+          document.body.style.backgroundColor = "black";
+          document.body.style.color = "white";
+        } else {
+          document.body.style.backgroundColor = "";
+          document.body.style.color = "";
+        }
+      }
+    </script>
   </body>
 </html>
